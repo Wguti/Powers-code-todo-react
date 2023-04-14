@@ -9,6 +9,10 @@ function useServer() {
       setUser({...data})
     }
 
+    if (error) {
+      toast.error(error.message)
+    }
+
     return { data, loading, error }
   }
   
